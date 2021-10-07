@@ -1,0 +1,27 @@
+.table-wrapper {
+    margin: 10px auto;
+    border: 1px solid #eee;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th,td {
+    border: 1px solid #eee;
+    padding: 10px 16px;
+    /* border-collapse: collapse; */
+}
+
+th {
+    background-color: #aaa;
+    border-color: #aaa
+}
+table tbody tr:nth-child(2n){
+    background-color: #eee;
+}
+
+table tbody tr:last-child{
+    background-color: #eee;
+}
+.book-qty {
+    margin: 0 5px;
+}

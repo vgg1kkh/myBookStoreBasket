@@ -1,0 +1,8 @@
+.table-wrapper {
+    border: 1px solid #eee;
+}
+
+th,td {
+    border: 1px solid #eee;
+    border-collapse: collapse;
+}

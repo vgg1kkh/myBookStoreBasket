@@ -1,0 +1,23 @@
+
+.box {
+    width: 600px;
+    border: 1px solid #333;
+    margin: auto;
+    padding: 10px
+}
+.books-wrapper {
+    width:100%;
+    background-color: #ccc;
+}
+.item-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.item-column{
+    flex: 1;
+}
+
+.item-wrapper:first-child {
+    flex: ;
+}

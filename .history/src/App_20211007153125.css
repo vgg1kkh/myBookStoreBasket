@@ -1,0 +1,11 @@
+.table-wrapper {
+    margin: 10px auto;
+    border: 1px solid #eee;
+    border-collapse: collapse;
+}
+
+th,td {
+    border: 1px solid #eee;
+    padding: 10px 1;
+    /* border-collapse: collapse; */
+}
