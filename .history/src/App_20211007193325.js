@@ -19,7 +19,7 @@ export default class App extends Component {
       if (item.id === id) {
         item.number += 1;
       }
-      if (item.number === 1) {
+      if(item.number===1){
       }
       return item;
     });
@@ -56,38 +56,38 @@ export default class App extends Component {
     return totalPrice;
   }
 
-  renderBooks() {
-    return this.state.bookList.map((item, index) => {
-      return (
-        <tr key={item.id}>
-          <td>{index + 1}</td>
-          <td>{item.name}</td>
-          <td>{item.date}</td>
-          <td>{formatPrice(item.price)}</td>
-          <td>
-            <button
-              disabled={item.number < 1 ? true : false}
-              onClick={(e) => this.onReduce(e, item.id)}
-            >
-              -
-            </button>
-            <span className="book-qty">{item.number}</span>
-            <button onClick={(e) => this.onAdd(e, item.id)}>+</button>
-          </td>
-          <td>
-            <button onClick={() => this.onRemove(item.id)}>REMOVE ITEM</button>
-          </td>
-        </tr>
-      );
-    });
+  renderBooks(){
+      return (this.state.bookList.map((item, index) => {
+        return (
+          <tr key={item.id}>
+            <td>{index + 1}</td>
+            <td>{item.name}</td>
+            <td>{item.date}</td>
+            <td>{formatPrice(item.price)}</td>
+            <td>
+              <button
+                disabled={item.number<1? true: false}
+                onClick={(e) => this.onReduce(e, item.id)}
+              >
+                -
+              </button>
+              <span className="book-qty">{item.number}</span>
+              <button onClick={(e) => this.onAdd(e, item.id)}>+</button>
+            </td>
+            <td>
+              <button onClick={() => this.onRemove(item.id)}>
+                REMOVE ITEM
+              </button>
+            </td>
+          </tr>
+        );
+      }))
   }
 
-  renderEmyptTip() {
-    return (
-      <tr style={{border:'transparent',outline:'none'}}>
-        <td style={{border:'transparent',outline:'none'}}>Nothing to check out</td>
-      </tr>
-    );
+  renderEmyptTip(){
+      return(
+        <h4>Nothing to check out</span>
+      )
   }
   render() {
     return (
@@ -105,9 +105,8 @@ export default class App extends Component {
               </tr>
             </thead>
             <tbody>
-              {this.state.bookList.length > 0
-                ? this.renderBooks()
-                : this.renderEmyptTip()}
+             { this.state.bookList.length > 0 ?
+              this.renderBooks() :  }
               <tr>
                 <td></td>
                 <td></td>

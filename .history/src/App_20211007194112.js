@@ -108,7 +108,7 @@ export default class App extends Component {
               {this.state.bookList.length > 0
                 ? this.renderBooks()
                 : this.renderEmyptTip()}
-              <tr>
+              <tr display={this.state.l}>
                 <td></td>
                 <td></td>
                 <td></td>

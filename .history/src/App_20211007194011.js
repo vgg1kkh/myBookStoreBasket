@@ -85,7 +85,7 @@ export default class App extends Component {
   renderEmyptTip() {
     return (
       <tr style={{border:'transparent',outline:'none'}}>
-        <td style={{border:'transparent',outline:'none'}}>Nothing to check out</td>
+        <td style={{border:'transparent',outLine:'none'}}>Nothing to check out</td>
       </tr>
     );
   }

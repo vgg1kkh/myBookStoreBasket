@@ -108,7 +108,7 @@ export default class App extends Component {
               {this.state.bookList.length > 0
                 ? this.renderBooks()
                 : this.renderEmyptTip()}
-              <tr>
+              <tr style={{display: (this.state.bookList===0? 'none': 'inline-block')}}>
                 <td></td>
                 <td></td>
                 <td></td>
