@@ -107,7 +107,7 @@ export default class App extends Component {
                 <td></td>
                 <td></td>
                 <td>Total</td>
-                <td>{formatPrice(this.getTotalPrice())}</td>
+                <td>{formatPrice(this.getTotalPrice()}</td>
               </tr>
             </tbody>
           </table>
