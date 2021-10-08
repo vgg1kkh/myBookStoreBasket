@@ -15,8 +15,7 @@ export default class App extends Component {
       newBookDate: "",
       newBookPrice: 0,
       newBookNumber: 1,
-      showAddLine: true,
-      showAddButton: true,
+      showAddLine:true
     };
   }
 
@@ -84,11 +83,10 @@ export default class App extends Component {
 
   //Add a new book
   addNewItem = () => {
-    if(!this.state.newBookName) return false;
     const newBook = {
       id: Math.floor(Math.random() * 10000000) + 1,
       name: this.state.newBookName,
-      date: this.state.newBookDate || 2021-11,
+      date: this.state.newBookDate,
       price: this.state.newBookPrice * 1,
       number: this.state.newBookNumber * 1,
     };
@@ -129,7 +127,7 @@ export default class App extends Component {
   }
 
   renderEmyptTip() {
-    return false;
+    return <button>Add Item</button>;
   }
   render() {
     return (
@@ -150,11 +148,9 @@ export default class App extends Component {
               {this.state.bookList.length > 0
                 ? this.renderBooks()
                 : this.renderEmyptTip()}
-              <tr style={{ display: this.state.showAddLine ? "" : "none" }}>
-                <td style={{ width: "10px" }}>
-                  <button onClick={() => this.setState({ showAddLine: false })}>
-                    Hide
-                  </button>
+              <tr style={{display:this.state.showAddLine? "":"none"}}>
+                <td style={{width:'10px'}}>
+                  <button onClick={()=>this.setState({showAddLine:false})}>Hide</button>
                 </td>
                 <td>
                   <input
@@ -187,7 +183,7 @@ export default class App extends Component {
                   />
                 </td>
                 <td>
-                  <button onClick={this.addNewItem}>Add Item</button>
+                  <button onClick={this.addNewItem}>Add</button>
                 </td>
               </tr>
               <tr
@@ -195,12 +191,7 @@ export default class App extends Component {
                   display: this.state.bookList.length > 0 ? "" : "none",
                 }}
               >
-                <td>
-                  <button onClick={() => this.setState({ showAddLine: true })}
-                  style={{display: this.state.showAddLine? 'none':''}}>
-                    Add
-                  </button>
-                </td>
+                <td><button onClick={()=>this.state.}>Add</button></td>
                 <td></td>
                 <td></td>
                 <td></td>

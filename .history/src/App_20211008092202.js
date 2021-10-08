@@ -84,11 +84,11 @@ export default class App extends Component {
 
   //Add a new book
   addNewItem = () => {
-    if(!this.state.newBookName) return false;
+    if(!this.state.newBookName)
     const newBook = {
       id: Math.floor(Math.random() * 10000000) + 1,
       name: this.state.newBookName,
-      date: this.state.newBookDate || 2021-11,
+      date: this.state.newBookDate,
       price: this.state.newBookPrice * 1,
       number: this.state.newBookNumber * 1,
     };

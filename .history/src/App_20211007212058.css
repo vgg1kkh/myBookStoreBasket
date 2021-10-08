@@ -3,8 +3,6 @@
     border: 1px solid #eee;
     border-collapse: collapse;
     text-align: center;
-    width: 600px;
-    table-layout: fixed;
 }
 
 th,td {
@@ -38,7 +36,7 @@ table tbody tr:last-child td:nth-child(-n+5) {
 
 /* Add item */
 .add-new-item{
-    display: block;
-    width: 100%;
+    display: inline-block;
+    width: 50px;
     height: 100%;
 }
